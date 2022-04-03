@@ -18,7 +18,7 @@
                                 <p class="price ml-auto">&#8377; <?= $car['rent_per_day'] ?> <span>/day</span></p>
                             </div>
                             <?php if ($this->session->userdata('role_id') != AGENCY_ROLE_ID) :  ?>
-                                <?php $booking_url = $this->session->userdata('user_id') == USER_ROLE_ID ? base_url('home/rent-car/' . $car['id']) : base_url('auth/login?from=car_rent') ?>
+                                <?php $booking_url = $this->session->userdata('role_id') == USER_ROLE_ID ? base_url('user/rent-car/' . $car['id']) : base_url('auth/login?from=car_rent') ?>
                                 <p class="d-flex mb-0 d-block">
                                     <a href="<?= $booking_url ?>" class="btn btn-info py-2 mx-auto">Rent</a>
                                 </p>

@@ -34,13 +34,23 @@ class Vehicle_model extends CI_Model
     {
         $this->db->from('bookings b')->join('vehicles v', 'v.id = b.vehicle_id')->join('users u', 'u.id = b.user_id')->where('v.agency_id', $agency_id);
         return $this->db->get()->result_array();
-        print_r($this->db->last_query());
-        // die;
     }
 
     public function get_vehicles_for_booking()
     {
         $vehicles = $this->db->get('vehicles')->result_array();
         return $vehicles;
+    }
+
+    function book_vehicle($booking_details)
+    {
+        $booking_id = $this->db->insert('bookings', $booking_details);
+        return $booking_id;
+    }
+    
+    public function get_user_bookings($user_id)
+    {
+        $this->db->from('bookings b')->join('vehicles v', 'v.id = b.vehicle_id')->where('b.user_id', $user_id);
+        return $this->db->get()->result_array();
     }
 }

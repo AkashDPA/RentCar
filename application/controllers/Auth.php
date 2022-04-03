@@ -66,7 +66,7 @@ class Auth extends CI_Controller
 
         if ($user_details['role_id'] == AGENCY_ROLE_ID)
             redirect('agency');
-        redirect('user');
+        redirect('/');
     }
 
 
