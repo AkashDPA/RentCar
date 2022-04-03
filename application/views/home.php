@@ -7,7 +7,7 @@
                     <h1 class="mb-4">Fast &amp; Easy Way To Rent A Car</h1>
                     <a href="https://vimeo.com/45830194" class="icon-wrap popup-vimeo d-flex align-items-center mt-4 justify-content-center">
                         <div class="icon d-flex align-items-center justify-content-center">
-                            <a href="<?= base_url('rent-cat') ?>" class="btn btn-secondary py-3 px-4"> Rent A Car Now</a>
+                            <a href="<?= base_url('home/rent-car') ?>" class="btn btn-secondary py-3 px-4"> Rent A Car Now</a>
                         </div>
                     </a>
                 </div>

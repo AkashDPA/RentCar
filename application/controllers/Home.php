@@ -11,5 +11,11 @@ class Home extends CI_Controller
 		$this->load->view('index', $page_data);
 	}
 
-	
+	public function rent_car()
+	{
+		$page_data['cars'] = $this->vehicle_model->get_vehicles_for_booking();
+		$page_data['page_title'] = 'Rent Car';
+		$page_data['page_name'] = 'rent_car';
+		$this->load->view('index', $page_data);
+	}
 }

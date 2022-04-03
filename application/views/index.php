@@ -12,9 +12,18 @@
 
 </head>
 
+<!-- //load navbar according to user role -->
+<?php
+	$navbar = 'auth/navbar.php';
+	if ($this->session->userdata('role_id') == AGENCY_ROLE_ID)
+		$navbar = APPPATH . 'views/agency/agency_navbar.php';
+	else if ($this->session->userdata('role_id') == USER_ROLE_ID)
+		$navbar = APPPATH . 'views/user/user_navbar.php';
+?>
+
 <body class="">
 	<div class="navbar_container">
-		<?php require('auth/navbar.php'); ?>
+		<?php require($navbar); ?>
 	</div>
 
 	<div class="page_container my-3">

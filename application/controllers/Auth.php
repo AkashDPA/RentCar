@@ -11,11 +11,18 @@ class Auth extends CI_Controller
 
     public function login()
     {
+        if($this->input->get('from') == "car_rent")
+            $this->session->set_flashdata('info', "Please Login to Rent a Car");
         $page_data['page_title'] = "Login";
         $page_data['page_name'] = "login";
         $this->load->view('auth/index', $page_data);
     }
 
+    public function logout()
+    {
+        $this->session->sess_destroy();
+        redirect('/');
+    }
 
     public function register($user_type = "user")
     {

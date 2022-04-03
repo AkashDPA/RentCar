@@ -9946,3 +9946,12 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+    
+.ftco-navbar-light .navbar-nav>.nav-item>.nav-link {
+    color: #000;
+}
+
+.ftco-navbar-light .navbar-brand {
+    color: #000;
+}
