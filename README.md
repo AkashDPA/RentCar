@@ -4,6 +4,11 @@ Car rental Agency website build with PHP Codeigniter, MySQL, Bootstrap
 ### by Akash Pathade ([LinkedIn](https://www.linkedin.com/in/akashdpa/))
 
 I have tried my 100%, Live at [rentcar.tabmedico.com](http://rentcar.tabmedico.com/)
+
+Demo users: 
+- Agency: email (agency@gmail.com), pass (1234)
+- Customer: email (user@gmail.com), pass (1234) 
+
 ## Features
 
 - Multiple Agencies
